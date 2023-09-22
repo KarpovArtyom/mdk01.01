@@ -1,0 +1,68 @@
+﻿<Window x:Class="FirstAPPPolina.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstAPPPolina"
+        mc:Ignorable="d"
+        Title="Главное окно" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <!--Абсолютный размер высоты -->
+            <RowDefinition Height="100"/>
+            <!--Относительные размеры высоты -->
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <TextBlock Text="программа на WPF"
+                      Style="{StaticResource TxbStyle}"/>
+            <Button Height="50" Width="150"
+                    Content="Приветствие"
+                    FontSize="18"
+                    Margin="5"
+                    Background="Aquamarine"
+                    Name="BtnHello"
+                    Click="BtnHello_Click"/>
+        </StackPanel>
+        <TextBlock Grid.Row="2"
+                   Grid.Column="1"
+            Text="Строка состояния"
+                   Style="{StaticResource TxbStyle}"/>
+        <Button Height="50" Width="150"
+                Content="Переход на стр2"
+                FontSize="18"
+                Margin="5"
+                Background="Red"
+                Name="BtnPagePR2"
+                Click="BtnPagePR2_Click"/>
+        <StackPanel Grid.Row="1" 
+            Orientation="Vertical"
+            VerticalAlignment="Top">
+            <Button Height="50" Width="150"
+                Content="Переход на стр3"
+                FontSize="18"
+                Margin="5"
+                Background="Azure"
+                Name="BtnPagePR3"
+                Click="BtnPagePR3_Click"/>
+            <Button Height="50" Width="150"
+                    Content="Переход на стр4"
+                    FontSize="18"
+                    Margin="10"
+                    Background="Coral"
+                    Name="BtnPagePR7"
+                    Click="BtnPagePR7_Click"/>
+        </StackPanel>
+        
+        <Frame Grid.Row="1" Grid.Column="1"
+               Name="FrmMain"/>
+    </Grid>
+</Window>
