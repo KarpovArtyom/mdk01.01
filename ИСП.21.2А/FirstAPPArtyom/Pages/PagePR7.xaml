@@ -18,10 +18,12 @@
                     HorizontalAlignment="Left">
             <TextBlock Text="Массив D=" 
                        Margin="10"/>
-            <TextBox Name="txtD" Margin="10" Width="150" Height="25"/>
+            <ListBox Name="lstD" Margin="10" Width="150"
+                     Height="50"/>
             <TextBlock Text="Массив E=" 
                        Margin="10"/>
-            <TextBox Name="txtE" Margin="10" Width="150" Height="25"/>
+            <ListBox Name="lstE" Margin="1" Width="150"
+                     Height="50"/>
         </StackPanel>
         <StackPanel Grid.Row="0" Orientation="Vertical"
                     HorizontalAlignment="Center">
